@@ -722,7 +722,7 @@ export default function App() {
 
               <div className="mt-8 flex items-center justify-center gap-6 text-gray-600 font-bold text-lg flex-wrap">
                 <span className="flex items-center gap-2 bg-[#F7FFF7] border-2 border-[#1A1A1A] py-2 px-4 rounded-full shadow-[2px_2px_0px_0px_#1A1A1A]">
-                  <Phone size={20} className="text-[#FF6B6B]" /> +91 98732 46330
+                  <Phone size={20} className="text-[#FF6B6B]" /> +91 95827 59535
                 </span>
                 <span className="flex items-center gap-2 bg-[#F7FFF7] border-2 border-[#1A1A1A] py-2 px-4 rounded-full shadow-[2px_2px_0px_0px_#1A1A1A]">
                   <MapPin size={20} className="text-[#4ECDC4]" /> 16-Joshi Road , Karol Bagh , New Delhi , Delhi-05
@@ -799,7 +799,7 @@ export default function App() {
 
         <div className="flex items-center gap-3">
           <Phone size={18} className="text-[#FFE66D]" />
-          <span>+91 98732 46330</span>
+          <span>+91 95827 59535</span>
         </div>
 
         <div className="flex items-center gap-3">
