@@ -410,61 +410,67 @@ const ProgramsSection = ({ whatsappUrl }) => {
   ];
 
   const programsData = [
-    {
-      id: 'p1',
-      category: 'settler',
-      title: 'Settler Group',
-      time: '9:30 AM - 12:30 PM',
-      desc: 'A gentle introduction to school life with fun learning activities, storytelling, games, and free play.',
-      icon: Smile,
-      color: 'bg-[#FFE66D]'
-    },
-    {
-      id: 'p2',
-      category: 'nursery',
-      title: 'Nursery',
-      time: '9:00 AM - 12:30 PM',
-      desc: 'Focus on phonics play, colour identification, memory games, and interactive learning activities.',
-      icon: Palette,
-      color: 'bg-[#FF6B6B]'
-    },
-    {
-      id: 'p3',
-      category: 'kg',
-      title: 'Kindergarten',
-      time: '8:30 AM - 1:00 PM',
-      desc: 'Developing reading, writing, creativity, and communication through engaging activities.',
-      icon: BookOpen,
-      color: 'bg-[#4ECDC4]'
-    },
-    {
-      id: 'p4',
-      category: 'class1',
-      title: 'Class I',
-      time: '8:30 AM - 1:00 PM',
-      desc: 'Building strong academic foundations along with creative and physical development.',
-      icon: Star,
-      color: 'bg-[#FFE66D]'
-    },
-    {
-      id: 'p5',
-      category: 'class2',
-      title: 'Class II',
-      time: '8:30 AM - 1:00 PM',
-      desc: 'Focus on academics, creativity, and skill development through fun learning activities.',
-      icon: Users,
-      color: 'bg-[#FF6B6B]'
-    },
-    {
-      id: 'p6',
-      category: 'class3',
-      title: 'Class III',
-      time: '8:30 AM - 1:00 PM',
-      desc: 'Strengthening academic skills with interactive learning, sports, and creative activities.',
-      icon: Shield,
-      color: 'bg-[#4ECDC4]'
-    }
-  ];
+  {
+    id: 'p1',
+    category: 'settler',
+    title: 'Settler Group',
+    time: '9:30 AM - 12:30 PM',
+    desc: 'A gentle introduction to school life with fun learning activities, storytelling, games, and free play.',
+    icon: Smile,
+    color: 'bg-[#FFE66D]',
+    iconColor: '#FF6B6B'
+  },
+  {
+    id: 'p2',
+    category: 'nursery',
+    title: 'Nursery',
+    time: '9:00 AM - 12:30 PM',
+    desc: 'Focus on phonics play, colour identification, memory games, and interactive learning activities.',
+    icon: Palette,
+    color: 'bg-[#FF6B6B]',
+    iconColor: '#4ECDC4'
+  },
+  {
+    id: 'p3',
+    category: 'kg',
+    title: 'Kindergarten',
+    time: '8:30 AM - 1:00 PM',
+    desc: 'Developing reading, writing, creativity, and communication through engaging activities.',
+    icon: BookOpen,
+    color: 'bg-[#4ECDC4]',
+    iconColor: '#FF6B6B'
+  },
+  {
+    id: 'p4',
+    category: 'class1',
+    title: 'Class I',
+    time: '8:30 AM - 1:00 PM',
+    desc: 'Building strong academic foundations along with creative and physical development.',
+    icon: Star,
+    color: 'bg-[#FFE66D]',
+    iconColor: '#4ECDC4'
+  },
+  {
+    id: 'p5',
+    category: 'class2',
+    title: 'Class II',
+    time: '8:30 AM - 1:00 PM',
+    desc: 'Focus on academics, creativity, and skill development through fun learning activities.',
+    icon: Users,
+    color: 'bg-[#FF6B6B]',
+    iconColor: '#FFE66D'
+  },
+  {
+    id: 'p6',
+    category: 'class3',
+    title: 'Class III',
+    time: '8:30 AM - 1:00 PM',
+    desc: 'Strengthening academic skills with interactive learning, sports, and creative activities.',
+    icon: Shield,
+    color: 'bg-[#4ECDC4]',
+    iconColor: '#FF6B6B'
+  }
+];
 
   const filteredPrograms =
     activeFilter === 'all'
@@ -509,7 +515,7 @@ const ProgramsSection = ({ whatsappUrl }) => {
               className={`play-card ${prog.color} p-8 relative overflow-hidden group flex flex-col`}
             >
               <div className="bg-white border-4 border-[#1A1A1A] w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-[4px_4px_0px_0px_#1A1A1A]">
-                <prog.icon size={32} />
+                <prog.icon size={32} stroke={prog.iconColor} strokeWidth={2.5} />
               </div>
 
               <h3 className="text-3xl font-black mb-2">{prog.title}</h3>
@@ -521,11 +527,11 @@ const ProgramsSection = ({ whatsappUrl }) => {
               <p className="font-medium text-lg flex-grow">{prog.desc}</p>
 
               <button
-                onClick={() => window.open(whatsappUrl, "_blank")}
-                className="mt-8 w-full bg-[#1A1A1A] text-white font-bold py-3 rounded-xl border-2 border-[#1A1A1A] hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
-              >
-                Ask on WhatsApp <MessageCircle size={20} />
-              </button>
+  onClick={() => window.open(whatsappUrl, "_blank")}
+  className="mt-8 w-full bg-[#FFE66D] text-[#1A1A1A] font-bold py-3 rounded-xl border-2 border-[#1A1A1A] hover:bg-[#FFD93D] transition-colors flex items-center justify-center gap-2 shadow-[4px_4px_0px_0px_#1A1A1A]"
+>
+  Ask on WhatsApp <MessageCircle size={20} />
+</button>
             </div>
           ))}
         </div>
