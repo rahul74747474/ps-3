@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Menu, X, ChevronRight, Star, Heart, Sun, Music, Palette, BookOpen, 
-  MapPin, Phone, Mail, ArrowRight, CheckCircle, Smile, Clock, Users, 
+import {
+  Menu, X, ChevronRight, Star, Heart, Sun, Music, Palette, BookOpen,
+  MapPin, Phone, Mail, ArrowRight, CheckCircle, Smile, Clock, Users,
   Shield, Sparkles, Send, MessageCircle
 } from 'lucide-react';
 
 // --- CUSTOM STYLES & ANIMATIONS ---
 const injectStyles = () => {
   return (
-    <style dangerouslySetInnerHTML={{__html: `
+    <style dangerouslySetInnerHTML={{
+      __html: `
       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
 
       :root {
@@ -157,23 +158,22 @@ const HomeSection = ({ whatsappUrl, scrollToSection }) => (
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
         <div className="space-y-8">
           <div className="inline-block bg-[#FFE66D] border-2 border-[#1A1A1A] rounded-full px-4 py-2 font-bold text-sm mb-4 transform -rotate-2">
-            ✨ Enrollment Open for 2026-2027
+            ✨ Admissions Open for 2026-2027
           </div>
           <h1 className="text-5xl md:text-7xl font-black leading-tight text-[#1A1A1A]">
-            Where Little Minds <br/>
+            Where Little Minds <br />
             <span className="text-[#FF6B6B] relative inline-block">
-              Grow Big
+              Begin their
               <svg className="absolute w-full h-4 -bottom-1 left-0 text-[#FFE66D]" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M0 5 Q 50 15 100 5" stroke="currentColor" strokeWidth="4" fill="transparent"/>
+                <path d="M0 5 Q 50 15 100 5" stroke="currentColor" strokeWidth="4" fill="transparent" />
               </svg>
-            </span> Dreams 🌱
+            </span> Learning journey 🌱
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 font-medium">
-            A vibrant, safe, and joyful playground for your child to discover, learn, and flourish every single day.
-          </p>
+            Vatika Playway School provides a joyful and safe environment where children learn through play, creativity, and interactive activities.</p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Button variant="whatsapp" onClick={() => window.open(whatsappUrl, '_blank')}>
-              Message Us <ArrowRight size={20}/>
+              Message Us <ArrowRight size={20} />
             </Button>
             <Button variant="outline" onClick={() => scrollToSection('programs')}>
               Explore Programs
@@ -185,23 +185,23 @@ const HomeSection = ({ whatsappUrl, scrollToSection }) => (
           {/* Animated Blob Background */}
           <div className="absolute inset-0 bg-[#4ECDC4] animate-blob opacity-20 transform scale-110"></div>
           <div className="absolute inset-4 bg-[#FFE66D] animate-blob opacity-40 transform -scale-x-100 delay-150"></div>
-          
+
           {/* Main Hero Image */}
           <div className="relative z-10 w-full h-full max-h-[500px] play-card overflow-hidden bg-[#FF6B6B]">
-            <img 
-              src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-              alt="Happy children playing" 
-              className="w-full h-full object-cover mix-blend-overlay opacity-80"
+            <img
+              src="https://i.ibb.co/rGcn6RDW/imag.webp"
+              alt="Happy children playing"
+              className="w-full h-full object-cover"
             />
           </div>
 
           {/* Floating UI Badges */}
           <div className="absolute -left-6 top-1/4 play-card p-4 bg-white animate-float z-20 flex items-center gap-3">
-            <div className="bg-[#4ECDC4] p-2 rounded-full border-2 border-[#1A1A1A]"><Smile className="text-white"/></div>
+            <div className="bg-[#4ECDC4] p-2 rounded-full border-2 border-[#1A1A1A]"><Smile className="text-white" /></div>
             <div className="font-bold">Happy Kids</div>
           </div>
           <div className="absolute -right-6 bottom-1/4 play-card p-4 bg-white animate-float-delayed z-20 flex items-center gap-3">
-            <div className="bg-[#FF6B6B] p-2 rounded-full border-2 border-[#1A1A1A]"><Star className="text-white"/></div>
+            <div className="bg-[#FF6B6B] p-2 rounded-full border-2 border-[#1A1A1A]"><Star className="text-white" /></div>
             <div className="font-bold">Top Rated</div>
           </div>
         </div>
@@ -220,10 +220,10 @@ const HomeSection = ({ whatsappUrl, scrollToSection }) => (
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
-            { icon: Shield, title: "Safe & Secure", desc: "24/7 monitored facilities and trained staff.", color: "bg-[#FFE66D]" },
-            { icon: Users, title: "Expert Teachers", desc: "Certified educators who love what they do.", color: "bg-[#FF6B6B]" },
-            { icon: Palette, title: "Creative Play", desc: "Art, music, and imagination at the core.", color: "bg-white" },
-            { icon: Heart, title: "Healthy Meals", desc: "Nutritious and yummy organic snacks.", color: "bg-[#F7FFF7]" }
+            { icon: Shield, title: "Safe & Caring Environment", desc: "A secure and friendly environment where every child feels comfortable and happy.", color: "bg-[#FFE66D]" },
+            { icon: Users, title: "Activity-Based Learning", desc: "Learning through fun activities like phonics play, storytelling, memory games, and interactive learning.", color: "bg-[#FF6B6B]" },
+            { icon: Palette, title: "Creative Development", desc: "Children explore creativity through art, drawing, dance, music, and craft activities.", color: "bg-white" },
+            { icon: Heart, title: "Physical & Mental Growth", desc: "Sports, yoga, brain gym activities, and free play help children stay active and healthy.", color: "bg-[#F7FFF7]" }
           ].map((feature, idx) => (
             <div key={idx} className={`play-card ${feature.color} p-8 text-center group`}>
               <div className="w-20 h-20 mx-auto bg-white border-4 border-[#1A1A1A] rounded-full flex items-center justify-center mb-6 group-hover:animate-wiggle shadow-[4px_4px_0px_0px_#1A1A1A]">
@@ -244,8 +244,8 @@ const HomeSection = ({ whatsappUrl, scrollToSection }) => (
 const AboutSection = () => (
   <div className="bg-[#F7FFF7]">
     {/* Header */}
-    <div className="bg-[#4ECDC4] py-20 px-6 text-center border-b-8 border-[#1A1A1A]">
-      <h1 className="text-5xl md:text-7xl font-black text-white drop-shadow-md mb-4">Our Story 📖</h1>
+    <div className="bg-[#ffffff] py-20 px-6 text-center border-b-8 border-[#1A1A1A]">
+      <h1 className="text-5xl md:text-7xl font-black text-black drop-shadow-md mb-4">About Vatika Primary School</h1>
       <p className="text-2xl text-[#1A1A1A] font-bold max-w-2xl mx-auto bg-[#FFE66D] py-2 px-6 rounded-full border-4 border-[#1A1A1A] shadow-[4px_4px_0px_0px_#1A1A1A] inline-block transform -rotate-1">Building foundational memories.</p>
     </div>
 
@@ -254,38 +254,40 @@ const AboutSection = () => (
       <div className="flex flex-col md:flex-row items-center gap-12">
         <div className="md:w-1/2 relative">
           <div className="absolute inset-0 bg-[#FF6B6B] rounded-3xl transform -rotate-6 border-4 border-[#1A1A1A]"></div>
-          <img src="https://images.unsplash.com/photo-1587691592099-24045742c181?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kids playing blocks" className="relative z-10 rounded-3xl border-4 border-[#1A1A1A] w-full object-cover h-[400px] shadow-[8px_8px_0px_0px_#1A1A1A]" />
+          <img src="https://i.ibb.co/hJ1kxCqy/Gemini-Generated-Image-7y3w6u7y3w6u7y3w.webp" alt="Kids playing blocks" className="relative z-10 rounded-3xl border-4 border-[#1A1A1A] w-full object-cover h-[400px] shadow-[8px_8px_0px_0px_#1A1A1A]" />
         </div>
         <div className="md:w-1/2 space-y-6">
           <h2 className="text-4xl md:text-5xl font-black text-[#1A1A1A]">How It All Began 🌟</h2>
           <p className="text-xl text-gray-700 font-medium leading-relaxed">
-            Founded in 2015 by a group of passionate educators and parents, our play school started with a simple belief: <strong className="text-[#FF6B6B]">learning should be as natural and fun as playing.</strong>
+            Vatika Primary School is dedicated to providing a joyful and engaging learning environment for young children.
+
+           
+            <strong className="text-[#FF6B6B]"> Our goal is to help children grow academically, socially, and creatively through fun learning activities and interactive experiences.</strong>
           </p>
           <p className="text-xl text-gray-700 font-medium leading-relaxed">
-            We wanted to create an environment free from rigid structures, where children's natural curiosity guides their educational journey.
-          </p>
+            We believe that early childhood education should be enjoyable, encouraging curiosity, imagination, and confidence in every child. </p>
         </div>
       </div>
 
       <div className="flex flex-col md:flex-row-reverse items-center gap-12">
         <div className="md:w-1/2 relative">
           <div className="absolute inset-0 bg-[#FFE66D] rounded-3xl transform rotate-6 border-4 border-[#1A1A1A]"></div>
-          <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kids painting" className="relative z-10 rounded-3xl border-4 border-[#1A1A1A] w-full object-cover h-[400px] shadow-[8px_8px_0px_0px_#1A1A1A]" />
+          <img src="https://i.ibb.co/0jmKr0KK/Gemini-Generated-Image-lqp724lqp724lqp7.webp" alt="Kids painting" className="relative z-10 rounded-3xl border-4 border-[#1A1A1A] w-full object-cover h-[400px] shadow-[8px_8px_0px_0px_#1A1A1A]" />
         </div>
         <div className="md:w-1/2 space-y-6">
           <h2 className="text-4xl md:text-5xl font-black text-[#1A1A1A]">Our Philosophy 🎨</h2>
           <ul className="space-y-4 text-xl font-medium text-gray-800">
             <li className="flex items-center gap-4 play-card p-4 hover:-translate-y-1">
               <div className="bg-[#4ECDC4] p-2 rounded-full border-2 border-[#1A1A1A]"><CheckCircle className="text-white" /></div>
-              Play is the highest form of research.
+              Learning Through Play
             </li>
             <li className="flex items-center gap-4 play-card p-4 hover:-translate-y-1">
               <div className="bg-[#FF6B6B] p-2 rounded-full border-2 border-[#1A1A1A]"><Heart className="text-white" /></div>
-              Every child is a unique individual.
+              Every Child is Special
             </li>
             <li className="flex items-center gap-4 play-card p-4 hover:-translate-y-1">
               <div className="bg-[#FFE66D] p-2 rounded-full border-2 border-[#1A1A1A]"><Sun className="text-[#1A1A1A]" /></div>
-              Environment is the third teacher.
+             Balanced Development
             </li>
           </ul>
         </div>
@@ -298,7 +300,7 @@ const AboutSection = () => (
     <section className="py-24 px-6 bg-[#FF6B6B]">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-6xl font-black text-white text-center mb-16 drop-shadow-md">Meet Our Super Teachers 🦸‍♀️</h2>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { name: "Ms. Emily", role: "Head Educator", hobby: "Loves baking cookies", color: "bg-[#FFE66D]" },
@@ -309,7 +311,7 @@ const AboutSection = () => (
             <div key={idx} className="play-card group overflow-hidden bg-white text-center flex flex-col items-center">
               <div className={`w-full ${teacher.color} h-32 border-b-4 border-[#1A1A1A] relative`}>
                 <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-gray-200 border-4 border-[#1A1A1A] rounded-full overflow-hidden">
-                  <img src={`https://i.pravatar.cc/150?u=${idx+10}`} alt={teacher.name} className="w-full h-full object-cover" />
+                  <img src={`https://i.pravatar.cc/150?u=${idx + 10}`} alt={teacher.name} className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="pt-16 pb-6 px-4">
@@ -324,49 +326,181 @@ const AboutSection = () => (
         </div>
       </div>
     </section>
-    
+
     <WaveTop color="#FF6B6B" />
   </div>
 );
+
+const ActivitiesSection = () => {
+
+  const activities = [
+    { name: "Phonics Play", icon: BookOpen, color: "bg-[#FFE66D]" },
+    { name: "Colour Identification", icon: Palette, color: "bg-[#FF6B6B]" },
+    { name: "Memory Games", icon: Sparkles, color: "bg-[#4ECDC4]" },
+    { name: "Story Narration", icon: BookOpen, color: "bg-[#FFE66D]" },
+    { name: "Role Play & Puppet Show", icon: Smile, color: "bg-[#FF6B6B]" },
+    { name: "Movie Day", icon: Star, color: "bg-[#4ECDC4]" },
+    { name: "Educational Games", icon: Users, color: "bg-[#FFE66D]" },
+    { name: "Drawing", icon: Palette, color: "bg-[#FF6B6B]" },
+    { name: "Art & Craft", icon: Palette, color: "bg-[#4ECDC4]" },
+    { name: "Dance", icon: Music, color: "bg-[#FFE66D]" },
+    { name: "Basketball", icon: Users, color: "bg-[#FF6B6B]" },
+    { name: "Yoga", icon: Heart, color: "bg-[#4ECDC4]" },
+    { name: "Brain Gym", icon: Sparkles, color: "bg-[#FFE66D]" },
+    { name: "Free Play", icon: Smile, color: "bg-[#FF6B6B]" },
+    { name: "Computer Learning", icon: BookOpen, color: "bg-[#4ECDC4]" },
+  ];
+
+  return (
+    <section className="py-24 px-6 bg-[#FFE66D] border-y-8 border-[#1A1A1A]">
+
+      <div className="max-w-7xl mx-auto">
+
+        {/* Heading */}
+        <div className="text-center mb-16">
+
+          <h2 className="text-5xl md:text-7xl font-black text-[#1A1A1A] mb-6">
+            Fun Learning Activities 🎨
+          </h2>
+
+          <p className="text-xl font-medium text-gray-800 max-w-3xl mx-auto">
+            At Vatika Playway School, children learn through exciting activities that
+            develop creativity, confidence, communication, and physical skills.
+          </p>
+
+        </div>
+
+        {/* Activities Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+
+          {activities.map((activity, index) => {
+
+            const Icon = activity.icon;
+
+            return (
+              <div
+                key={index}
+                className={`play-card ${activity.color} p-6 text-center group`}
+              >
+
+                <div className="w-16 h-16 mx-auto mb-4 bg-white border-4 border-[#1A1A1A] rounded-full flex items-center justify-center shadow-[4px_4px_0px_0px_#1A1A1A] group-hover:animate-wiggle">
+                  <Icon size={28} className="text-[#1A1A1A]" />
+                </div>
+
+                <h3 className="font-bold text-lg text-[#1A1A1A]">
+                  {activity.name}
+                </h3>
+
+              </div>
+            );
+          })}
+
+        </div>
+
+      </div>
+
+    </section>
+  );
+};
 
 const ProgramsSection = ({ whatsappUrl }) => {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const filters = [
     { id: 'all', label: 'All Programs', color: 'bg-[#FFE66D]' },
-    { id: 'toddler', label: 'Toddler (1.5-2.5y)', color: 'bg-[#FF6B6B]' },
-    { id: 'preschool', label: 'Preschool (2.5-4y)', color: 'bg-[#4ECDC4]' },
-    { id: 'kindergarten', label: 'Kindergarten (4-6y)', color: 'bg-white' },
+    { id: 'settler', label: 'Settler Group', color: 'bg-[#FF6B6B]' },
+    { id: 'nursery', label: 'Nursery', color: 'bg-[#4ECDC4]' },
+    { id: 'kg', label: 'Kindergarten', color: 'bg-[#FFE66D]' },
+    { id: 'class1', label: 'Class I', color: 'bg-[#FF6B6B]' },
+    { id: 'class2', label: 'Class II', color: 'bg-[#4ECDC4]' },
+    { id: 'class3', label: 'Class III', color: 'bg-[#FFE66D]' },
   ];
 
   const programsData = [
-    { id: 'p1', category: 'toddler', title: 'Tiny Explorers', time: '9:00 AM - 12:00 PM', desc: 'Focuses on sensory play, basic motor skills, and social interaction in a cozy environment.', icon: Smile, color: 'bg-[#FFE66D]' },
-    { id: 'p2', category: 'preschool', title: 'Creative Minds', time: '9:00 AM - 1:00 PM', desc: 'Introduction to structured play, alphabets, numbers, and expressive arts.', icon: Palette, color: 'bg-[#FF6B6B]' },
-    { id: 'p3', category: 'kindergarten', title: 'Future Leaders', time: '8:30 AM - 2:00 PM', desc: 'Prepares children for primary school with foundational math, reading, and science projects.', icon: BookOpen, color: 'bg-[#4ECDC4]' },
-    { id: 'p4', category: 'toddler', title: 'Music & Movement', time: 'Afternoon Batch', desc: 'A special program focused purely on rhythm, dancing, and musical instruments.', icon: Music, color: 'bg-white' },
-    { id: 'p5', category: 'preschool', title: 'Nature Navigators', time: 'Flexible', desc: 'Outdoor-focused learning where kids interact with plants, mud, and the environment.', icon: Sun, color: 'bg-[#F7FFF7]' },
+    {
+      id: 'p1',
+      category: 'settler',
+      title: 'Settler Group',
+      time: '9:30 AM - 12:30 PM',
+      desc: 'A gentle introduction to school life with fun learning activities, storytelling, games, and free play.',
+      icon: Smile,
+      color: 'bg-[#FFE66D]'
+    },
+    {
+      id: 'p2',
+      category: 'nursery',
+      title: 'Nursery',
+      time: '9:00 AM - 12:30 PM',
+      desc: 'Focus on phonics play, colour identification, memory games, and interactive learning activities.',
+      icon: Palette,
+      color: 'bg-[#FF6B6B]'
+    },
+    {
+      id: 'p3',
+      category: 'kg',
+      title: 'Kindergarten',
+      time: '8:30 AM - 1:00 PM',
+      desc: 'Developing reading, writing, creativity, and communication through engaging activities.',
+      icon: BookOpen,
+      color: 'bg-[#4ECDC4]'
+    },
+    {
+      id: 'p4',
+      category: 'class1',
+      title: 'Class I',
+      time: '8:30 AM - 1:00 PM',
+      desc: 'Building strong academic foundations along with creative and physical development.',
+      icon: Star,
+      color: 'bg-[#FFE66D]'
+    },
+    {
+      id: 'p5',
+      category: 'class2',
+      title: 'Class II',
+      time: '8:30 AM - 1:00 PM',
+      desc: 'Focus on academics, creativity, and skill development through fun learning activities.',
+      icon: Users,
+      color: 'bg-[#FF6B6B]'
+    },
+    {
+      id: 'p6',
+      category: 'class3',
+      title: 'Class III',
+      time: '8:30 AM - 1:00 PM',
+      desc: 'Strengthening academic skills with interactive learning, sports, and creative activities.',
+      icon: Shield,
+      color: 'bg-[#4ECDC4]'
+    }
   ];
 
-  const filteredPrograms = activeFilter === 'all' ? programsData : programsData.filter(p => p.category === activeFilter);
+  const filteredPrograms =
+    activeFilter === 'all'
+      ? programsData
+      : programsData.filter((p) => p.category === activeFilter);
 
   return (
     <div className="bg-[#F7FFF7]">
       <div className="max-w-7xl mx-auto px-6 py-24">
+
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-7xl font-black text-[#1A1A1A] mb-6">Explore Programs 🎒</h1>
-          <p className="text-2xl text-gray-700 font-medium max-w-3xl mx-auto">Discover the perfect learning journey for your child, designed to spark joy and curiosity.</p>
+          <h1 className="text-5xl md:text-7xl font-black text-[#1A1A1A] mb-6">
+            Our Classes 🎒
+          </h1>
+          <p className="text-2xl text-gray-700 font-medium max-w-3xl mx-auto">
+            Explore the different learning stages at Vatika Playway School designed for the growth and development of every child.
+          </p>
         </div>
 
         {/* Filters */}
         <div className="flex flex-wrap justify-center gap-4 mb-16">
-          {filters.map(filter => (
+          {filters.map((filter) => (
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
               className={`font-bold py-3 px-6 rounded-full border-4 border-[#1A1A1A] transition-all duration-200 ${
-                activeFilter === filter.id 
-                  ? `${filter.color} shadow-none translate-y-1 ${filter.id === 'kindergarten' ? 'text-black' : (filter.id === 'toddler' ? 'text-white' : 'text-black')}` 
-                  : `bg-gray-100 text-gray-500 hover:bg-white hover:-translate-y-1 shadow-[4px_4px_0px_0px_#1A1A1A]`
+                activeFilter === filter.id
+                  ? `${filter.color} translate-y-1`
+                  : `bg-gray-100 hover:bg-white hover:-translate-y-1 shadow-[4px_4px_0px_0px_#1A1A1A]`
               }`}
             >
               {filter.label}
@@ -374,56 +508,52 @@ const ProgramsSection = ({ whatsappUrl }) => {
           ))}
         </div>
 
-        {/* Grid */}
+        {/* Programs Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredPrograms.map((prog) => (
-            <div key={prog.id} className={`play-card ${prog.color} p-8 relative overflow-hidden group flex flex-col`}>
-              {/* Decorative circle */}
-              <div className="absolute -top-10 -right-10 w-32 h-32 bg-white opacity-20 rounded-full group-hover:scale-150 transition-transform duration-500 pointer-events-none"></div>
-              
-              <div className="bg-white border-4 border-[#1A1A1A] w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-[4px_4px_0px_0px_#1A1A1A] transform -rotate-3 group-hover:rotate-0 transition-transform">
-                <prog.icon size={32} className="text-[#1A1A1A]" />
+            <div
+              key={prog.id}
+              className={`play-card ${prog.color} p-8 relative overflow-hidden group flex flex-col`}
+            >
+              <div className="bg-white border-4 border-[#1A1A1A] w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-[4px_4px_0px_0px_#1A1A1A]">
+                <prog.icon size={32} />
               </div>
-              
-              <h3 className={`text-3xl font-black mb-2 ${prog.color === 'bg-[#FF6B6B]' ? 'text-white' : 'text-[#1A1A1A]'}`}>
-                {prog.title}
-              </h3>
-              
-              <div className={`inline-flex items-center gap-2 font-bold text-sm mb-4 px-3 py-1 bg-white border-2 border-[#1A1A1A] rounded-full shadow-[2px_2px_0px_0px_#1A1A1A] self-start`}>
+
+              <h3 className="text-3xl font-black mb-2">{prog.title}</h3>
+
+              <div className="inline-flex items-center gap-2 font-bold text-sm mb-4 px-3 py-1 bg-white border-2 border-[#1A1A1A] rounded-full">
                 <Clock size={16} /> {prog.time}
               </div>
-              
-              <p className={`font-medium text-lg leading-relaxed flex-grow ${prog.color === 'bg-[#FF6B6B]' ? 'text-white' : 'text-gray-800'}`}>
-                {prog.desc}
-              </p>
 
-              <button 
-                onClick={() => window.open(whatsappUrl, '_blank')}
-                className="mt-8 w-full bg-[#1A1A1A] text-white font-bold py-3 rounded-xl border-2 border-[#1A1A1A] hover:bg-gray-800 transition-colors flex items-center justify-center gap-2 relative z-10 cursor-pointer"
+              <p className="font-medium text-lg flex-grow">{prog.desc}</p>
+
+              <button
+                onClick={() => window.open(whatsappUrl, "_blank")}
+                className="mt-8 w-full bg-[#1A1A1A] text-white font-bold py-3 rounded-xl border-2 border-[#1A1A1A] hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
               >
                 Ask on WhatsApp <MessageCircle size={20} />
               </button>
             </div>
           ))}
         </div>
+
       </div>
     </div>
   );
 };
-
 const GallerySection = () => {
   const [lightboxImage, setLightboxImage] = useState(null);
 
   const images = [
-    "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1587691592099-24045742c181?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1594608661623-aa0bd3a0b1ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1519689680058-324335c77eba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    "https://i.ibb.co/R4YZdQJt/Gemini-Generated-Image-ubaldpubaldpubal.webp",
+    "https://i.ibb.co/C3BrFqhq/Gemini-Generated-Image-2ig5gn2ig5gn2ig5.webp",
+    "https://i.ibb.co/DDpkv0Wv/Gemini-Generated-Image-2cnyc52cnyc52cny.webp",
+    "https://i.ibb.co/gbh9hFnG/Gemini-Generated-Image-scy1jzscy1jzscy1.webp",
+    "https://i.ibb.co/rGPfLzt3/Gemini-Generated-Image-kdbk0qkdbk0qkdbk.webp",
+    "https://i.ibb.co/KzmnMmFF/Gemini-Generated-Image-1siorn1siorn1sio.webp",
+    "https://i.ibb.co/Kpx5pX0D/Gemini-Generated-Image-rk45nzrk45nzrk45.webp",
+    "https://i.ibb.co/zWXbHMn4/Gemini-Generated-Image-28l04o28l04o28l0.webp",
+    "https://i.ibb.co/whrTj93p/Gemini-Generated-Image-550hxp550hxp550h.webp"
   ];
 
   return (
@@ -439,7 +569,7 @@ const GallerySection = () => {
               onClick={() => setLightboxImage(src)}
             >
               <img src={src} alt={`Gallery ${idx}`} className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-[#4ECDC4] bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
                 <div className="bg-white text-[#1A1A1A] p-3 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[4px_4px_0px_0px_#1A1A1A] border-2 border-[#1A1A1A]">
                   <Sparkles size={24} />
                 </div>
@@ -471,10 +601,10 @@ const GallerySection = () => {
 
 export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
   // Replace this phone number with the actual WhatsApp number
-  const phoneNumber = "1234567890";
-  const defaultMessage = encodeURIComponent("Hi! I want to know more about KidsPlay school and your programs.");
+  const phoneNumber = "9582759535";
+  const defaultMessage = encodeURIComponent("Hi! I want to know more about Vatika Primary school and your programs.");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${defaultMessage}`;
 
   const navItems = [
@@ -489,7 +619,7 @@ export default function App() {
     const element = document.getElementById(id);
     if (element) {
       // Offset by roughly the header height
-      const yOffset = -80; 
+      const yOffset = -80;
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
@@ -504,14 +634,15 @@ export default function App() {
       <nav className="fixed w-full z-50 bg-[#F7FFF7]/90 backdrop-blur-md border-b-4 border-[#1A1A1A] shadow-sm">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           {/* Logo */}
-          <div 
+          <div
             className="flex items-center gap-2 cursor-pointer group"
             onClick={() => scrollToSection('home')}
           >
-            <div className="bg-[#FF6B6B] p-2 rounded-xl border-2 border-[#1A1A1A] group-hover:rotate-12 transition-transform shadow-[2px_2px_0px_0px_#1A1A1A]">
-              <Sun size={28} className="text-white" />
-            </div>
-            <span className="text-2xl font-black tracking-tight text-[#1A1A1A]">Kids<span className="text-[#4ECDC4]">Play</span></span>
+            <img 
+  src="https://i.ibb.co/xTHtMpV/image-removebg-preview-2.webp"
+  className="w-[49px] h-[49px] object-contain"
+/>
+            <span className="text-2xl font-black tracking-tight text-[#1A1A1A]">Vatika<span className="text-[#4ECDC4]">Primary</span></span>
           </div>
 
           {/* Desktop Nav */}
@@ -531,7 +662,7 @@ export default function App() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             className="md:hidden p-2 border-2 border-[#1A1A1A] rounded-xl bg-white shadow-[2px_2px_0px_0px_#1A1A1A]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -563,15 +694,23 @@ export default function App() {
         <div id="home">
           <HomeSection whatsappUrl={whatsappUrl} scrollToSection={scrollToSection} />
         </div>
-        
+
         <div id="about">
           <AboutSection />
         </div>
-        
+
+
+
+
         <div id="programs">
           <ProgramsSection whatsappUrl={whatsappUrl} />
         </div>
+
         
+  <div id="activities">
+    <ActivitiesSection />
+  </div>
+
         <div id="gallery">
           <GallerySection />
         </div>
@@ -582,28 +721,28 @@ export default function App() {
             {/* Background elements */}
             <div className="absolute top-[-50px] right-[-50px] text-[#4ECDC4] opacity-30 animate-spin-slow pointer-events-none"><Sun size={200} /></div>
             <div className="absolute bottom-[-30px] left-[-30px] text-[#FF6B6B] opacity-30 animate-bounce pointer-events-none"><Heart size={120} /></div>
-            
+
             <div className="relative z-10">
               <h2 className="text-5xl md:text-7xl font-black text-[#1A1A1A] mb-8">Wanna contact us? 💬</h2>
               <p className="text-2xl text-gray-800 font-medium mb-12">
-                Skip the boring forms! Click the button below to chat directly with our team on WhatsApp. 
+                Skip the boring forms! Click the button below to chat directly with our team on WhatsApp.
                 We usually reply in minutes!
               </p>
-              
-              <button 
+
+              <button
                 onClick={() => window.open(whatsappUrl, '_blank')}
                 className="mx-auto bg-[#25D366] text-white play-button font-bold py-5 px-12 rounded-full text-2xl flex items-center justify-center gap-4 hover:bg-[#20bd5a] transition-colors"
               >
-                <MessageCircle size={32} /> 
+                <MessageCircle size={32} />
                 Chat on WhatsApp
               </button>
-              
+
               <div className="mt-8 flex items-center justify-center gap-6 text-gray-600 font-bold text-lg flex-wrap">
                 <span className="flex items-center gap-2 bg-[#F7FFF7] border-2 border-[#1A1A1A] py-2 px-4 rounded-full shadow-[2px_2px_0px_0px_#1A1A1A]">
-                  <Phone size={20} className="text-[#FF6B6B]"/> (555) 123-4567
+                  <Phone size={20} className="text-[#FF6B6B]" /> +91 98732 46330
                 </span>
                 <span className="flex items-center gap-2 bg-[#F7FFF7] border-2 border-[#1A1A1A] py-2 px-4 rounded-full shadow-[2px_2px_0px_0px_#1A1A1A]">
-                  <MapPin size={20} className="text-[#4ECDC4]"/> 123 Fun Lane, City
+                  <MapPin size={20} className="text-[#4ECDC4]" /> 16-Joshi Road , Karol Bagh , New Delhi , Delhi-05
                 </span>
               </div>
             </div>
@@ -613,58 +752,96 @@ export default function App() {
 
       {/* FOOTER */}
       <footer className="bg-[#1A1A1A] text-white pt-20 pb-10 px-6 relative overflow-hidden">
-        {/* Decorative background shapes for footer */}
-        <div className="absolute top-0 right-10 w-64 h-64 bg-[#4ECDC4] rounded-full blur-[100px] opacity-20"></div>
-        <div className="absolute bottom-0 left-10 w-64 h-64 bg-[#FF6B6B] rounded-full blur-[100px] opacity-20"></div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
-          <div className="space-y-6 md:col-span-1">
-            <div className="flex items-center gap-2">
-              <div className="bg-[#FFE66D] p-2 rounded-xl"><Sun size={28} className="text-[#1A1A1A]" /></div>
-              <span className="text-3xl font-black tracking-tight text-white">Kids<span className="text-[#FFE66D]">Play</span></span>
-            </div>
-            <p className="font-medium text-gray-400">Where little minds grow big dreams. Creating a joyful foundation for lifelong learning.</p>
-          </div>
+  {/* Decorative background shapes */}
+  <div className="absolute top-0 right-10 w-64 h-64 bg-[#4ECDC4] rounded-full blur-[100px] opacity-20"></div>
+  <div className="absolute bottom-0 left-10 w-64 h-64 bg-[#FF6B6B] rounded-full blur-[100px] opacity-20"></div>
 
-          <div>
-            <h4 className="text-xl font-bold mb-6 text-[#4ECDC4]">Quick Links</h4>
-            <ul className="space-y-4 font-medium text-gray-400">
-              {navItems.map((link, i) => (
-                <li key={i}>
-                  <button onClick={() => scrollToSection(link.id)} className="hover:text-white transition-colors flex items-center gap-2">
-                    <ChevronRight size={16} className="text-[#FF6B6B]"/>{link.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
 
-          <div>
-            <h4 className="text-xl font-bold mb-6 text-[#FFE66D]">Programs</h4>
-            <ul className="space-y-4 font-medium text-gray-400">
-              <li>Toddler (1.5-2.5y)</li>
-              <li>Preschool (2.5-4y)</li>
-              <li>Kindergarten (4-6y)</li>
-              <li>Summer Camp</li>
-            </ul>
-          </div>
+    {/* School Info */}
+    <div className="space-y-6 md:col-span-1">
+      <div className="flex items-center gap-2">
+        <img 
+  src="https://i.ibb.co/xTHtMpV/image-removebg-preview-2.webp"
+  className="w-[49px] h-[49px] object-contain"
+/>
+        <span className="text-3xl font-black tracking-tight text-white">
+          Vatika<span className="text-[#FFE66D]">Primary</span>
+        </span>
+      </div>
 
-          <div>
-            <h4 className="text-xl font-bold mb-6 text-[#FF6B6B]">Newsletter</h4>
-            <p className="font-medium text-gray-400 mb-4">Subscribe for fun updates and parenting tips!</p>
-            <div className="flex bg-white rounded-full p-1 focus-within:ring-4 ring-[#4ECDC4] transition-all">
-              <input type="email" placeholder="Your email" className="w-full bg-transparent text-[#1A1A1A] font-medium px-4 focus:outline-none" />
-              <button className="bg-[#FF6B6B] text-white p-3 rounded-full hover:bg-red-500 transition-colors">
-                <Send size={20} />
-              </button>
-            </div>
-          </div>
+      <p className="font-medium text-gray-400">
+        Vatika Primary School provides a joyful learning environment where children grow through play, creativity, and interactive activities.
+      </p>
+    </div>
+
+    {/* Quick Links */}
+    <div>
+      <h4 className="text-xl font-bold mb-6 text-[#4ECDC4]">Quick Links</h4>
+      <ul className="space-y-4 font-medium text-gray-400">
+        {navItems.map((link, i) => (
+          <li key={i}>
+            <button
+              onClick={() => scrollToSection(link.id)}
+              className="hover:text-white transition-colors flex items-center gap-2"
+            >
+              <ChevronRight size={16} className="text-[#FF6B6B]" />
+              {link.label}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Classes */}
+    <div>
+      <h4 className="text-xl font-bold mb-6 text-[#FFE66D]">Classes</h4>
+
+      <ul className="space-y-4 font-medium text-gray-400">
+        <li>Settler Group</li>
+        <li>Nursery</li>
+        <li>Kindergarten</li>
+        <li>Class I</li>
+        <li>Class II</li>
+        <li>Class III</li>
+      </ul>
+    </div>
+
+    {/* Contact Info */}
+    <div>
+      <h4 className="text-xl font-bold mb-6 text-[#FF6B6B]">Contact Us</h4>
+
+      <div className="space-y-4 text-gray-400 font-medium">
+
+        <div className="flex items-center gap-3">
+          <Phone size={18} className="text-[#FFE66D]" />
+          <span>+91 98732 46330</span>
         </div>
 
-        <div className="max-w-7xl mx-auto mt-16 pt-8 border-t-2 border-gray-800 text-center text-gray-500 font-medium">
-          <p>© {new Date().getFullYear()} KidsPlay School. All rights reserved. Designed with ❤️ for kids.</p>
+        <div className="flex items-center gap-3">
+          <MapPin size={18} className="text-[#4ECDC4]" />
+          <span>Vatika Primary School, Karol Bagh , Delhi-05</span>
         </div>
-      </footer>
+
+        <div className="flex items-center gap-3">
+          <Mail size={18} className="text-[#FF6B6B]" />
+          <span>info@vatikaprimaryschool.co.in</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  {/* Bottom copyright */}
+  <div className="max-w-7xl mx-auto mt-16 pt-8 border-t-2 border-gray-800 text-center text-gray-500 font-medium">
+    <p>
+      © {new Date().getFullYear()} Vatika Primary School. All rights reserved.
+    </p>
+  </div>
+
+</footer>
     </div>
   );
 }
