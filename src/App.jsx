@@ -189,7 +189,7 @@ const HomeSection = ({ whatsappUrl, scrollToSection }) => (
           {/* Main Hero Image */}
           <div className="relative z-10 w-full h-full max-h-[500px] play-card overflow-hidden bg-[#FF6B6B]">
             <img
-              src="https://i.ibb.co/rGcn6RDW/imag.webp"
+              src="https://i.ibb.co/GfpCTV8C/Gemini-Generated-Image-5ueqn75ueqn75ueq.webp"
               alt="Happy children playing"
               className="w-full h-full object-cover"
             />
@@ -294,62 +294,37 @@ const AboutSection = () => (
       </div>
     </section>
 
-    <WaveBottom color="#FF6B6B" />
-
-    {/* Team Section */}
-    <section className="py-24 px-6 bg-[#FF6B6B]">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-6xl font-black text-white text-center mb-16 drop-shadow-md">Meet Our Super Teachers 🦸‍♀️</h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { name: "Ms. Emily", role: "Head Educator", hobby: "Loves baking cookies", color: "bg-[#FFE66D]" },
-            { name: "Mr. James", role: "Art & Music", hobby: "Plays 3 instruments", color: "bg-[#4ECDC4]" },
-            { name: "Ms. Sarah", role: "Toddler Lead", hobby: "Expert story reader", color: "bg-white" },
-            { name: "Mrs. Davis", role: "Kindergarten", hobby: "Gardening guru", color: "bg-[#F7FFF7]" }
-          ].map((teacher, idx) => (
-            <div key={idx} className="play-card group overflow-hidden bg-white text-center flex flex-col items-center">
-              <div className={`w-full ${teacher.color} h-32 border-b-4 border-[#1A1A1A] relative`}>
-                <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-gray-200 border-4 border-[#1A1A1A] rounded-full overflow-hidden">
-                  <img src={`https://i.pravatar.cc/150?u=${idx + 10}`} alt={teacher.name} className="w-full h-full object-cover" />
-                </div>
-              </div>
-              <div className="pt-16 pb-6 px-4">
-                <h3 className="text-2xl font-black text-[#1A1A1A]">{teacher.name}</h3>
-                <p className="font-bold text-[#FF6B6B] mb-2">{teacher.role}</p>
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 mt-4 bg-gray-100 py-2 px-4 rounded-xl border-2 border-dashed border-gray-400 font-medium text-sm text-gray-700">
-                  Fun Fact: {teacher.hobby}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <WaveTop color="#FF6B6B" />
   </div>
 );
 
 const ActivitiesSection = () => {
-
-  const activities = [
-    { name: "Phonics Play", icon: BookOpen, color: "bg-[#FFE66D]" },
-    { name: "Colour Identification", icon: Palette, color: "bg-[#FF6B6B]" },
-    { name: "Memory Games", icon: Sparkles, color: "bg-[#4ECDC4]" },
-    { name: "Story Narration", icon: BookOpen, color: "bg-[#FFE66D]" },
-    { name: "Role Play & Puppet Show", icon: Smile, color: "bg-[#FF6B6B]" },
-    { name: "Movie Day", icon: Star, color: "bg-[#4ECDC4]" },
-    { name: "Educational Games", icon: Users, color: "bg-[#FFE66D]" },
-    { name: "Drawing", icon: Palette, color: "bg-[#FF6B6B]" },
-    { name: "Art & Craft", icon: Palette, color: "bg-[#4ECDC4]" },
-    { name: "Dance", icon: Music, color: "bg-[#FFE66D]" },
-    { name: "Basketball", icon: Users, color: "bg-[#FF6B6B]" },
-    { name: "Yoga", icon: Heart, color: "bg-[#4ECDC4]" },
-    { name: "Brain Gym", icon: Sparkles, color: "bg-[#FFE66D]" },
-    { name: "Free Play", icon: Smile, color: "bg-[#FF6B6B]" },
-    { name: "Computer Learning", icon: BookOpen, color: "bg-[#4ECDC4]" },
-  ];
+const activities = [
+  {
+    title: "Yoga",
+    desc: "Simple yoga exercises that help children improve focus, balance, and physical well-being.",
+    img: "https://i.ibb.co/vCZXTzXc/Gemini-Generated-Image-fnn1pcfnn1pcfnn1.webp"
+  },
+  {
+    title: "Art & Craft",
+    desc: "Creative activities where children explore colors, drawing, and craft to develop imagination.",
+    img: "https://i.ibb.co/wFfvyNyp/Gemini-Generated-Image-u42a8lu42a8lu42a.webp"
+  },
+  {
+    title: "Festival Celebration",
+    desc: "Children celebrate cultural festivals together to learn traditions and values.",
+    img: "https://i.ibb.co/WNYCvwT4/Gemini-Generated-Image-vuwcmsvuwcmsvuwc.webp"
+  },
+  {
+    title: "Gardening",
+    desc: "Kids learn to plant and care for plants, encouraging responsibility and love for nature.",
+    img: "https://i.ibb.co/tMg95sg0/Gemini-Generated-Image-ws46t3ws46t3ws46.webp"
+  },
+  {
+    title: "Sports",
+    desc: "Outdoor games and sports that help children stay active and develop teamwork skills.",
+    img: "https://i.ibb.co/RThYGwd6/Gemini-Generated-Image-y17ploy17ploy17p.webp"
+  }
+];
 
   return (
     <section className="py-24 px-6 bg-[#FFE66D] border-y-8 border-[#1A1A1A]">
@@ -358,42 +333,51 @@ const ActivitiesSection = () => {
 
         {/* Heading */}
         <div className="text-center mb-16">
-
           <h2 className="text-5xl md:text-7xl font-black text-[#1A1A1A] mb-6">
             Fun Learning Activities 🎨
           </h2>
 
           <p className="text-xl font-medium text-gray-800 max-w-3xl mx-auto">
-            At Vatika Playway School, children learn through exciting activities that
-            develop creativity, confidence, communication, and physical skills.
+            Children learn best when they are engaged, creative, and having fun.
+            Our activities help develop creativity, confidence, and social skills.
           </p>
-
         </div>
 
-        {/* Activities Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        {/* Horizontal Scroll */}
+        <div className="flex gap-8 overflow-x-auto pb-6">
 
-          {activities.map((activity, index) => {
+          {activities.map((activity, index) => (
 
-            const Icon = activity.icon;
+            <div
+              key={index}
+              className="min-w-[260px] max-w-[260px] play-card overflow-hidden flex flex-col"
+            >
 
-            return (
-              <div
-                key={index}
-                className={`play-card ${activity.color} p-6 text-center group`}
-              >
+              {/* 9:16 Image */}
+              <div className="relative w-full aspect-[9/16] overflow-hidden">
+                <img
+                  src={activity.img}
+                  alt={activity.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
-                <div className="w-16 h-16 mx-auto mb-4 bg-white border-4 border-[#1A1A1A] rounded-full flex items-center justify-center shadow-[4px_4px_0px_0px_#1A1A1A] group-hover:animate-wiggle">
-                  <Icon size={28} className="text-[#1A1A1A]" />
-                </div>
+              {/* White Info Section */}
+              <div className="bg-white p-5 border-t-4 border-[#1A1A1A] flex flex-col gap-2">
 
-                <h3 className="font-bold text-lg text-[#1A1A1A]">
-                  {activity.name}
+                <h3 className="font-black text-lg text-[#1A1A1A]">
+                  {activity.title}
                 </h3>
 
+                <p className="text-sm font-medium text-gray-700">
+                  {activity.desc}
+                </p>
+
               </div>
-            );
-          })}
+
+            </div>
+
+          ))}
 
         </div>
 
@@ -402,7 +386,6 @@ const ActivitiesSection = () => {
     </section>
   );
 };
-
 const ProgramsSection = ({ whatsappUrl }) => {
   const [activeFilter, setActiveFilter] = useState('all');
 
