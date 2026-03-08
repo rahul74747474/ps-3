@@ -212,31 +212,41 @@ const HomeSection = ({ whatsappUrl, scrollToSection }) => (
 
     {/* WHY CHOOSE US */}
     <section className="py-20 px-6 bg-[#4ECDC4] relative">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-6 drop-shadow-md">Why Parents Love Us ❤️</h2>
-          <p className="text-xl text-white font-medium max-w-2xl mx-auto">We blend learning with play in a secure environment designed just for little explorers.</p>
-        </div>
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-6xl font-black text-white mb-6 drop-shadow-md">
+        Why Parents Love Us ❤️
+      </h2>
+      <p className="text-xl text-white font-medium max-w-2xl mx-auto">
+        We blend learning with play in a secure environment designed just for little explorers.
+      </p>
+    </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {[
-            { icon: Shield, title: "Safe & Caring Environment", desc: "A secure and friendly environment where every child feels comfortable and happy.", color: "bg-[#FFE66D]" },
-            { icon: Users, title: "Activity-Based Learning", desc: "Learning through fun activities like phonics play, storytelling, memory games, and interactive learning.", color: "bg-[#FF6B6B]" },
-            { icon: Palette, title: "Creative Development", desc: "Children explore creativity through art, drawing, dance, music, and craft activities.", color: "bg-white" },
-            { icon: Heart, title: "Physical & Mental Growth", desc: "Sports, yoga, brain gym activities, and free play help children stay active and healthy.", color: "bg-[#F7FFF7]" }
-          ].map((feature, idx) => (
-            <div key={idx} className={`play-card ${feature.color} p-8 text-center group`}>
-              <div className="w-20 h-20 mx-auto bg-white border-4 border-[#1A1A1A] rounded-full flex items-center justify-center mb-6 group-hover:animate-wiggle shadow-[4px_4px_0px_0px_#1A1A1A]">
-                <feature.icon size={40} className="text-[#1A1A1A]" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-[#1A1A1A]">{feature.title}</h3>
-              <p className="text-gray-800 font-medium">{feature.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {[
+        { icon: Shield, title: "Safe & Caring Environment", desc: "A secure and friendly environment where every child feels comfortable and happy.", color: "bg-[#FFE66D]", iconColor:"text-[#4ECDC4]" },
+        { icon: Users, title: "Activity-Based Learning", desc: "Learning through fun activities like phonics play, storytelling, memory games, and interactive learning.", color: "bg-[#FF6B6B]", iconColor:"text-[#FF6B6B]" },
+        { icon: Palette, title: "Creative Development", desc: "Children explore creativity through art, drawing, dance, music, and craft activities.", color: "bg-white", iconColor:"text-[#845EC2]" },
+        { icon: Heart, title: "Physical & Mental Growth", desc: "Sports, yoga, brain gym activities, and free play help children stay active and healthy.", color: "bg-[#F7FFF7]", iconColor:"text-[#FF6B6B]" }
+      ].map((feature, idx) => (
+        <div key={idx} className={`play-card ${feature.color} p-8 text-center group`}>
+          
+          <div className="w-20 h-20 mx-auto bg-gradient-to-br from-white to-gray-100 border-4 border-[#1A1A1A] rounded-full flex items-center justify-center mb-6 group-hover:animate-wiggle shadow-[4px_4px_0px_0px_#1A1A1A]">
+           <feature.icon size={40} className={`${feature.iconColor}`} />
+          </div>
 
+          <h3 className="text-2xl font-bold mb-4 text-[#1A1A1A]">
+            {feature.title}
+          </h3>
+
+          <p className="text-gray-800 font-medium">
+            {feature.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
     <WaveTop color="#4ECDC4" />
   </div>
 );
